@@ -1,7 +1,7 @@
 name: my-cron
 on:
   schedule:
-    - cron: '20 8 * * *'
+    - cron: '25 8 * * *'
 jobs:
   cron:
     runs-on: ubuntu-latest
