@@ -1,0 +1,13 @@
+name: checkURLExpired
+on:
+  schedule:
+    - cron: '35 21 * * *'
+jobs:
+  cron:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call our API route
+        run: |
+          curl --request POST \
+          --url '${{ secrets.CHECKURL }}' \
+          --header 'Authorization: Bearer ${{ secrets.AUTHKEY }}'
