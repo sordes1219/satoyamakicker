@@ -1,7 +1,7 @@
 name: my-cron
 on:
   schedule:
-    - cron: '25 8 * * *'
+    - cron: '*/10 * * *'
 jobs:
   cron:
     runs-on: ubuntu-latest
@@ -9,5 +9,5 @@ jobs:
       - name: Call our API route
         run: |
           curl --request GET \
-          --url 'https://satoyama.vercel.app/api/datafetcher' \
+          --url '${{ secrets.URL }}' \
           --header 'Authorization: Bearer ${{ secrets.AUTHKEY }}'
