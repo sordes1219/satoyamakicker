@@ -1,7 +1,7 @@
 name: checkURLExpired
 on:
   schedule:
-    - cron: '35 21 * * *'
+    - cron: '００ 4 * * *'
 jobs:
   cron:
     runs-on: ubuntu-latest
